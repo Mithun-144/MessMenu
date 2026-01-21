@@ -1,0 +1,180 @@
+/* .day{
+  height:20px;
+  width:20px;
+  border:2px solid black;
+  margin:10px;
+  padding:10px;
+}
+.activeday{
+  height:20px;
+  width:20px;
+  border:2px solid black;
+  margin:10px;
+  padding:10px;
+  background-color: aquamarine;
+} */
+
+
+/* App.css */
+/* App.css */
+/* App.css */
+/* App.css */
+/* App.css */
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  /* Using the exact warm charcoal/grey from the top of your image */
+  --bg-color: #5d5c58; 
+  --card-bg: #f5ead8; /* Warm cream/beige for cards */
+  --accent-orange: #ff8c00;
+  --text-dark: #3d3c3a;
+  --item-bg: #fffbf2;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 950px;
+  text-align: center;
+}
+
+.main-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Day Tabs */
+.Week {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.day, .activeday {
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.day {
+  background: #fdfcfb;
+  color: var(--text-dark);
+}
+
+.activeday {
+  background: var(--accent-orange);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* 2x2 Grid Layout */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+/* The Cards */
+.meal-card {
+  background: var(--card-bg);
+  border-radius: 28px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.icon-box {
+  width: 55px;
+  height: 55px;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 2px solid var(--accent-orange);
+}
+
+.header-text h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-text span {
+  font-size: 0.85rem;
+  color: #8b8374;
+  font-weight: 600;
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+li {
+  background: var(--item-bg);
+  padding: 14px 20px;
+  border-radius: 15px;
+  color: var(--text-dark);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+li::after {
+  content: '›';
+  font-size: 1.5rem;
+  color: #c5bba8;
+}
+
+li:hover {
+  transform: scale(1.02);
+  border-color: var(--accent-orange);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+}
